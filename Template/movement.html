@@ -1,0 +1,50 @@
+<html>
+
+ <head>
+    <title>
+        Tridot Assignment
+    </title>
+    <style>
+      body
+      {
+          text-align: center;
+          margin-top:70px;
+      }
+      div
+      {
+          background-color:steelblue;
+          padding:7px;
+      }
+      a
+      {
+          padding:10px;
+          text-decoration: none;
+          color:white;
+      }
+  </style>
+ </head>
+ <body>
+    <div>
+    <a href="/pi/">Add product Id</a>
+    <a href="/li/">Add location Id</a>
+    <a href="/upi/">Edit product_id</a>
+    <a href="/uli/">Edit location_id</a>
+    <a href="/upm/">Edit product_movement</a>
+    <a href="/v/">view product detail</a>
+    </div>
+      <h3>Add product movement</h3>
+      {{r}}
+      <form action="/movement/" method="post">
+        {% csrf_token %}
+        Enter the product id : <input type="number" name="product_id"> <br><br>
+        Enter the from location:<input type="text" name="from_location"><br><br>
+        Enter the to location:<input type="text" name="to_location"><br><br>
+        Enter the product  : <input type="text" name="product"><br><br>
+        Enter the quantity : <input type="number" name="quantity"><br><br>
+        <input type="submit" value="Add">
+      </form>
+
+
+ </body>
+
+</html>
